@@ -21,10 +21,10 @@ service on your Cloud project.
   gcloud beta services mcp enable developerknowledge.googleapis.com --project=$PROJECT_ID
   ```
 
-4. Log in with `gcloud` with the required scopes:
+4. Log in with `gcloud`:
 
   ```
-  gcloud auth application-default login --scopes=https://www.googleapis.com/auth/devprofiles.full_control,https://www.googleapis.com/auth/cloud-platform
+  gcloud auth application-default login
   ```
 
 5. Install the extension.
