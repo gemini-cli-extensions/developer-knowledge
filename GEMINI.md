@@ -29,6 +29,26 @@ insufficient, use `get_documents` to retrieve full content.
 should call: `print(developer_knowledge.search_documents(query="How to create a
 Cloud Storage bucket?"))`
 
+### answer_query
+
+Use this tool to let another model search for content and synthesize an answer.
+This can save tokens in your own context window. This can be helpful for
+summarizing complex results. `answer_query` returns citations for its response.
+If needed, you can fetch the full content of the citations using
+`get_documents`, just like you can with `search_documents`.
+
+**When to use:**
+
+*   Use this to synthesize complex information without using as many tokens as
+    `search_documents`.
+
+**When not to use:**
+
+*   Do not use this tool if the user's question is not related to one of the
+    covered Google developer products.
+*   Do not use this tool if you already have a document name and need its
+    content; use `get_documents` instead.
+
 ### get_documents
 
 This tool retrieves the full content of multiple documents (up to 20) in a
